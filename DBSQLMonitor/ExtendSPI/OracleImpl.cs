@@ -79,7 +79,7 @@ FROM V$SESSION t
   LEFT JOIN V$SQL s2 ON t.PREV_SQL_ID = s2.SQL_ID AND t.PREV_CHILD_NUMBER = s2.CHILD_NUMBER
 WHERE t.TYPE = 'USER' AND t.SID != USERENV('SID')";
 
-                cmd.CommandTimeout = 300;
+                cmd.CommandTimeout = 360;
 
                 List<SessionInfo> sessionList = new List<SessionInfo>(128);
                 conn.Open();
