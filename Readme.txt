@@ -24,3 +24,13 @@ SQL Monitor
 		Oracle 10g 或更高版本	 Select Any Dictionary 和 Alter System 权限，例如system
 		无需安装Oracle客户端，登录Oracle时使用tnsnames或IP/SID方式(192.168.0.1/ora11r2)
 
+
+====================================================================================
+
+TestSQL
+	测试Oracle数据库的连通性，当前运行环境下不同连接方式的响应性能差异
+		System.Data.OracleClient	.NET Framework为Oracle提供的缺省ADO.NET实现
+		Oracle.DataAccess.Client	Oracle提供的官方ADO.NET适配（ODP.NET）
+		Oracle.ManagedDataAccess	Oracle提供的全托管ADO.NET适配，不依赖于Oracle的非托管客户端
+	测试微软缺省实现的bug，例如偶发的两条数据，转换到DataSet/DataTable或DataReader读取时，行数翻倍的情况
+
